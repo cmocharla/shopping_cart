@@ -43,19 +43,25 @@ print(products)
 orderlist = []
 
 #while True:
-    #matching_products = [p for p in products if str(p["id"]) == x]
-    #print(matching_products)
-    #matching_product = matching_products[0]
-    #print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
+#matching_products = [p for p in products if str(p["id"]) == x]
+#print(matching_products)
+#matching_product = matching_products[0]
+#print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
 #
-
+total_price = 0
 while True:
     x = input('Please Scan or Enter The Product Code; Enter done if complete: ')
-    orderlist.append(x)
     if x == "done":
         break
     else:
-            matching_products = [p for p in products if str(p["id"]) == x]
-            matching_product = matching_products[0]
-            print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
-print(orderlist)
+        matching_products = [p for p in products if str(p["id"]) == x]
+        matching_product = matching_products[0]
+        total_price = total_price + (matching_product["price"])
+        y = int(matching_product["price"])
+        print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
+        orderlist.append(y)
+#print(*orderlist, sep="\n")
+
+#total_price =  
+print(total_price)
+#for y in orderlist

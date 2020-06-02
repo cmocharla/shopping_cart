@@ -37,11 +37,11 @@ def to_usd(my_price):
 
 # TODO: write some Python code here to produce the desired output
 
-print(products)
+#print(products)
 
 
+pricelist = []
 orderlist = []
-
 #while True:
 #matching_products = [p for p in products if str(p["id"]) == x]
 #print(matching_products)
@@ -58,10 +58,27 @@ while True:
         matching_product = matching_products[0]
         total_price = total_price + (matching_product["price"])
         y = int(matching_product["price"])
-        print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
-        orderlist.append(y)
-#print(*orderlist, sep="\n")
+        i = matching_product["name"] + "     " + to_usd(matching_product["price"])
+        #print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
+        pricelist.append(y)
+        orderlist.append(i)
+#print(*pricelist, sep="\n")
 
-#total_price =  
-print(total_price)
+#for id in orderlist:
+    pass
+#total_price =
+
+print("Selected Product: " + matching_product["name"] + "           " + str(matching_product["price"]))
+
+print(*orderlist, sep="\n")
+
+print("Total Product Price: " + str(total_price))
 #for y in orderlist
+
+tax = (total_price *.08875)
+costplustax = (total_price + tax)
+ 
+t = to_usd(tax)
+c = to_usd(costplustax)
+print("Total Tax: " + t )
+print("Order Total: " + c )

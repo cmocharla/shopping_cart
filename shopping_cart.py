@@ -39,21 +39,23 @@ def to_usd(my_price):
 
 print(products)
 
-x = input('Please Scan or Enter The Product Code; Enter done if complete: ')
+
 orderlist = []
 
-matching_products = [p for p in products if str(p["id"]) == x]
-print(matching_products)
-matching_product = matching_products[0]
-print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
-
-
-
-
-#while x != "done":
-#    input('Please Scan or Enter The Product Code; Enter done if complete: ')
-#    orderlist.append(x)
-#    if x == "done":
-#        break
+#while True:
+    #matching_products = [p for p in products if str(p["id"]) == x]
+    #print(matching_products)
+    #matching_product = matching_products[0]
+    #print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
 #
-#print(orderlist)
+
+while True:
+    x = input('Please Scan or Enter The Product Code; Enter done if complete: ')
+    orderlist.append(x)
+    if x == "done":
+        break
+    else:
+            matching_products = [p for p in products if str(p["id"]) == x]
+            matching_product = matching_products[0]
+            print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
+print(orderlist)

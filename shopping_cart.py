@@ -1,4 +1,5 @@
 # shopping_cart.py
+import datetime
 
 products = [
     {
@@ -171,7 +172,7 @@ total_price = 0
 
 while True:
     x = input(
-           'Please Scan or Enter The Product Code; Enter done if complete: ') 
+           'Please Scan or Enter The Product Code; Enter done if complete: ')
     if x == "done":
         break
     else:
@@ -195,7 +196,44 @@ while True:
     pass
 #total_price =
 
-print("Selected Product: " + matching_product["name"] + "           " +
+
+#> ---------------------------------
+#> GREEN FOODS GROCERY
+#> WWW.GREEN-FOODS-GROCERY.COM
+#> ---------------------------------
+#> CHECKOUT AT: 2020-02-07 03:54 PM
+#> ---------------------------------
+#> SELECTED PRODUCTS:
+#>  ... Chocolate Sandwich Cookies ($3.50)
+#>  ... All-Seasons Salt ($4.99)
+#>  ... Robust Golden Unsweetened Oolong Tea ($2.49)
+#>  ... All-Seasons Salt ($4.99)
+#>  ... Chocolate Sandwich Cookies ($3.50)
+#> ---------------------------------
+#> SUBTOTAL: $19.47
+#> TAX: $1.70
+#> TOTAL: $21.17
+#> ---------------------------------
+#> THANKS, SEE YOU AGAIN SOON!
+#> ---------------------------------
+
+
+
+
+print('---------------------------------')
+print('Not Your Parents Bodega')
+print('WWW.NOTYOURPARENTSBODEGA>COM')
+print('---------------------------------')
+import datetime
+y = datetime.datetime.now()
+
+print(" Checkout At " + (y.strftime("%Y-%m-%d %I:%M %p")))
+print('---------------------------------')
+print('---------------------------------')
+print('---------------------------------')
+print('---------------------------------')
+
+print(matching_product["name"] + "           " +
       str(matching_product["price"]))
 
 print(*orderlist, sep="\n")

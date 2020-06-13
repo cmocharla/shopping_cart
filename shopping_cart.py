@@ -208,8 +208,13 @@ def to_usd(my_price):
     Returns: $4,000.44
     """
     return f"${my_price:,.2f}"  #> $12,000.71
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> parent of 76727c0... Complete Raw code 
 # TODO: write some Python code here to produce the desired output
 
 #print(products)
@@ -247,7 +252,11 @@ while True:
             total_price = total_price + (matching_product["price"])
             y = int(matching_product["price"])
 <<<<<<< HEAD
+<<<<<<< HEAD
             i = "... " + matching_product["name"] + "  " + to_usd(
+=======
+            i = matching_product["name"] + "     " + to_usd(
+>>>>>>> parent of 76727c0... Complete Raw code 
 =======
             i = matching_product["name"] + "     " + to_usd(
 >>>>>>> parent of 76727c0... Complete Raw code 
@@ -297,10 +306,17 @@ import datetime
 y = datetime.datetime.now()
 
 print(" Checkout At " + (y.strftime("%Y-%m-%d %I:%M %p")))
+<<<<<<< HEAD
 print('---------------------------------')
 print('---------------------------------')
 print('---------------------------------')
 print('---------------------------------')
+=======
+print('---------------------------------')
+print('---------------------------------')
+print('---------------------------------')
+print('---------------------------------')
+>>>>>>> parent of 76727c0... Complete Raw code 
 
 print(matching_product["name"] + "           " +
       str(matching_product["price"]))

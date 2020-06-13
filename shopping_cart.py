@@ -207,10 +207,8 @@ def to_usd(my_price):
     Example: to_usd(4000.444444)
     Returns: $4,000.44
     """
-    return f"(${my_price:,.2f})"  #> $12,000.71
+    return f"${my_price:,.2f}"  #> $12,000.71
 
-
-matching_products = []
 
 # TODO: write some Python code here to produce the desired output
 
@@ -248,7 +246,11 @@ while True:
             matching_product = matching_products[0]
             total_price = total_price + (matching_product["price"])
             y = int(matching_product["price"])
+<<<<<<< HEAD
             i = "... " + matching_product["name"] + "  " + to_usd(
+=======
+            i = matching_product["name"] + "     " + to_usd(
+>>>>>>> parent of 76727c0... Complete Raw code 
                 matching_product["price"])
             #print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
             pricelist.append(y)
@@ -288,25 +290,24 @@ while True:
 
 
 print('---------------------------------')
-print('NOT YOUR PARENTS BODEGA')
+print('Not Your Parents Bodega')
 print('WWW.NOTYOURPARENTSBODEGA>COM')
 print('---------------------------------')
 import datetime
 y = datetime.datetime.now()
 
-print(" CHECKOUT AT " + (y.strftime("%Y-%m-%d %I:%M %p")))
+print(" Checkout At " + (y.strftime("%Y-%m-%d %I:%M %p")))
+print('---------------------------------')
+print('---------------------------------')
+print('---------------------------------')
 print('---------------------------------')
 
+print(matching_product["name"] + "           " +
+      str(matching_product["price"]))
 
-#print("Selected Products: " + orderlist["name"] + "           " + str(orderlist["price"]))
-#print("Selected Product: " + orderlist["name"] + " " + str(orderlist["price"]))
-print("SELECTED PRODUCTS:")
-print (*orderlist, sep= "\n")
-print('---------------------------------')
+print(*orderlist, sep="\n")
 
-
-#print(str(*orderlist,  ))
-print("SUBTOTAL: " + str(total_price))
+print("Total Product Price: " + str(total_price))
 #for y in orderlist
 
 tax = (total_price * .08875)
@@ -314,8 +315,5 @@ costplustax = (total_price + tax)
 
 t = to_usd(tax)
 c = to_usd(costplustax)
-print("TAX: " + t)
-print("TOTAL: " + c)
-print('---------------------------------')
-print("THANK YOU FOR CHOOSING NOT YOUR PARENTS BODEGA")
-print('---------------------------------')
+print("Total Tax: " + t)
+print("Order Total: " + c)

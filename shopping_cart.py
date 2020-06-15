@@ -194,18 +194,15 @@ while True:
             y = int(matching_product["price"])
             i = "... " + matching_product["name"] + "     " + to_usd(
                 matching_product["price"])
-            #print("Selected Product: " + matching_product["name"] + " " + str(matching_product["price"]))
             pricelist.append(y)
             orderlist.append(i)
 
         except:
             print("Product Not Found")
 
-#print(*pricelist, sep="\n")
 
-#for id in orderlist:
-    pass
-#total_price =
+
+
 
 
 #> ---------------------------------
@@ -228,34 +225,25 @@ while True:
 #> THANKS, SEE YOU AGAIN SOON!
 #> ---------------------------------
 
-
-
+# Spacing Blank Lines Before Output 
+print("")
+print("")
+print("")
 
 print('---------------------------------')
 print('NOT YOUR PARENTS BODEGA')
 print('WWW.NOTYOURPARENTSBODEGA>COM')
 print('---------------------------------')
-import datetime
 y = datetime.datetime.now()
-
 print(" CHECKOUT AT " + (y.strftime("%Y-%m-%d %I:%M %p")))
 print('---------------------------------')
-
-
-#print("Selected Products: " + orderlist["name"] + "           " + str(orderlist["price"]))
-#print("Selected Product: " + orderlist["name"] + " " + str(orderlist["price"]))
 print("SELECTED PRODUCTS:")
 print (*orderlist, sep= "\n")
 print('---------------------------------')
-
 s = to_usd2(total_price)
-#print(str(*orderlist,  ))
 print("SUBTOTAL: " + s)
-#for y in orderlist
-
 tax = (total_price * .08875)
 costplustax = (total_price + tax)
-
 t = to_usd2(tax)
 c = to_usd2(costplustax)
 print("TAX: " + t)

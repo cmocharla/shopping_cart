@@ -183,8 +183,8 @@ total_price = 0
 
 while True:
     x = input(
-           'Please Scan or Enter The Product Code; Enter done if complete: ')
-    if x == "done":
+           'Please Scan or Enter The Product Code; Enter "DONE" if complete: ')
+    if x == "DONE":
         break
     else:
         try:

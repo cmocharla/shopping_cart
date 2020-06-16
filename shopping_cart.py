@@ -232,7 +232,7 @@ print("")
 
 print('---------------------------------')
 print('NOT YOUR PARENTS BODEGA')
-print('WWW.NOTYOURPARENTSBODEGA>COM')
+print('WWW.NOTYOURPARENTSBODEGA.COM')
 print('---------------------------------')
 y = datetime.datetime.now()
 print(" CHECKOUT AT " + (y.strftime("%Y-%m-%d %I:%M %p")))
